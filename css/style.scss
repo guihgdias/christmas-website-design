@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
-/*Reset*/
+//Reset
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -12,15 +12,15 @@
   transition: all .2s linear;
 }
 
-/*Variables*/
+//Variables
 $blue: #0097e6;
-$black: #111;
+$black: #000;
 $white: #fff;
 $light-color: #aaa;
 $light-bg: #0a0a0a;
 $border: .1rem solid rgba(255, 255, 255, .2);
 
-/*Mixins*/
+//Mixins
 @mixin title-text($titleVal) {
   font-size: $titleVal;
   color: $white;
@@ -40,7 +40,7 @@ $border: .1rem solid rgba(255, 255, 255, .2);
   gap: 2rem;
 }
 
-/* -- */
+//----
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -66,7 +66,11 @@ body {
   height: 1000rem;
 }
 
-/*Header*/
+section {
+  padding: 3rem 9%;
+}
+
+//Header
 .header {
   position: fixed;
   top: 0;
@@ -79,6 +83,11 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: $border;
+  transform: translateY(-20rem);
+
+  &.active {
+    transform: translateY(0rem);
+  }
 
   .logo {
     @include title-text(2.5rem);
@@ -154,10 +163,102 @@ body {
   }
 }
 
+.home {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background: url(../assets/images/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .tree {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    z-index: 10;
+  }
+
+  .mountain {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40rem;
+    width: 100%;
+    object-fit: cover;
+    z-index: 5;
+  }
+
+  .moon {
+    position: absolute;
+    top: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25vw;
+    z-index: 1;
+  }
+
+  .cloud-1 {
+    position: absolute;
+    top: 20rem;
+    left: 0;
+    width: 60vw;
+    z-index: 2;
+  }
+
+  .cloud-2 {
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    width: 60vw;
+  }
+
+  .content {
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 3;
+
+    p {
+      @include title-text(3rem);
+      text-transform: uppercase;
+      text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .7);
+    }
+
+    h3 {
+      @include title-text(10rem);
+      text-transform: uppercase;
+      text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .7);
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(transparent, #000);
+    z-index: 12;
+  }
+}
+
+
+
 //Media Queries
 @media (max-width: 1250px) {
   .header {
     padding: 1.5rem 2rem;
+  }
+
+  section {
+    padding: 3rem 9%;
   }
 }
 
