@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+/*Reset*/
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+/*Variables*/
+$blue: #0097e6;
+$black: #111;
+$white: #fff;
+$light-color: #aaa;
+$light-bg: #0a0a0a;
+$border: .1rem solid rgba(255, 255, 255, .2);
+
+/*Mixins*/
+@mixin title-text($titleVal) {
+  font-size: $titleVal;
+  color: $white;
+  text-transform: capitalize;
+}
+
+@mixin graph-text($graphVal) {
+  font-size: $graphVal;
+  color: $light-color;
+  line-height: 2;
+  padding: 1.5rem 0;
+}
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 2rem;
+}
+
+/* -- */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $black;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $blue;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  background: $black;
+  height: 1000rem;
+}
+
+/*Header*/
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  background: $black;
+  padding: 1.5rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: $border;
+
+  .logo {
+    @include title-text(2.5rem);
+  }
+
+  .navbar {
+    a {
+      @include title-text(2rem);
+      margin: 0 1.5rem;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  .icons div,
+  .icons a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    background: $white;
+    color: $blue;
+    margin-left: .5rem;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background: $blue;
+      color: $white;
+    }
+  }
+
+  #menu-btn {
+    display: none;
+  }
+
+  .search-form {
+    position: absolute;
+    top: 99%;
+    right: 0;
+    left: 0;
+    background: $black;
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    border-top: $border;
+    border-bottom: $border;
+    height: 6rem;
+    gap: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    &.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    input {
+      width: 100%;
+      background: none;
+      color: $white;
+      font-size: 1.6rem;
+    }
+    
+    label {
+      font-size: 2.5rem;
+      cursor: pointer;
+      color: $white;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
+
+//Media Queries
+@media (max-width: 1250px) {
+  .header {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    #menu-btn {
+      display: inline-block;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 99%;
+      right: 0;
+      left: 0;
+      background: $black;
+      border-top: $border;
+      border-bottom: $border;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      a {
+        display: block;
+        margin: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+}
