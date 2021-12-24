@@ -24,7 +24,7 @@ window.onscroll = () => {
   searchBtn.classList.remove('fa-times');
   searchForm.classList.remove('active');
 
-  if(window.scrollY > 600) {
+  if(window.scrollY > 650) {
     document.querySelector('.header').classList.add('active');
   } else {
     document.querySelector('.header').classList.remove('active');

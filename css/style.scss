@@ -14,7 +14,7 @@
 
 //Variables
 $blue: #0097e6;
-$black: #000;
+$black: #040709;
 $white: #fff;
 $light-color: #aaa;
 $light-bg: #0a0a0a;
@@ -167,7 +167,8 @@ section {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-  background: url(../assets/images/home-bg.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../assets/images/home-bg.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
@@ -175,7 +176,6 @@ section {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 20rem;
     width: 100%;
     object-fit: cover;
     z-index: 10;
@@ -185,7 +185,6 @@ section {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 40rem;
     width: 100%;
     object-fit: cover;
     z-index: 5;
@@ -193,7 +192,7 @@ section {
 
   .moon {
     position: absolute;
-    top: 20rem;
+    top: 15rem;
     left: 50%;
     transform: translateX(-50%);
     width: 25vw;
@@ -204,7 +203,7 @@ section {
     position: absolute;
     top: 20rem;
     left: 0;
-    width: 60vw;
+    width: 50vw;
     z-index: 2;
   }
 
@@ -212,7 +211,7 @@ section {
     position: absolute;
     top: 5rem;
     right: 0;
-    width: 60vw;
+    width: 50vw;
   }
 
   .content {
@@ -244,10 +243,12 @@ section {
     left: 0;
     width: 100%;
     height: 5rem;
-    background: linear-gradient(transparent, #000);
+    background: linear-gradient(transparent, $black);
     z-index: 12;
   }
 }
+
+
 
 
 
