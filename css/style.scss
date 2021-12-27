@@ -261,6 +261,29 @@ section {
   section {
     padding: 3rem 9%;
   }
+
+  .home {
+    
+    .tree {
+      width: 120%;
+    }
+
+    .mountain {
+      width: 120%;
+    }
+
+    .moon {
+      top: 20rem;
+    }
+
+    .cloud-1 {
+      top: 25rem;
+    }
+
+    .cloud-2 {
+      top: 10rem;
+    }
+  }
 }
 
 @media (max-width: 1050px) {
@@ -290,6 +313,20 @@ section {
       a {
         display: block;
         margin: 2rem;
+      }
+    }
+  }
+
+  .home {
+  
+    .content {
+      
+      p {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 3rem;
       }
     }
   }
