@@ -405,7 +405,7 @@ section {
     font-size: 3rem;
   }
 }
-@media (max-width: 250px) {
+@media (max-width: 300px) {
   .header {
     flex-direction: column;
   }
@@ -437,6 +437,10 @@ section {
   }
   .home .mountain {
     height: 15rem;
+  }
+
+  .products .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
 }
 
