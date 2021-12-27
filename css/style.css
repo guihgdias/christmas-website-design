@@ -36,6 +36,20 @@ section {
   padding: 3rem 9%;
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  background: #0097e6;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.btn:hover {
+  background: #fff;
+  color: #0097e6;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -123,7 +137,7 @@ section {
 .home {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/images/home-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,6 +147,7 @@ section {
   position: absolute;
   bottom: 0;
   left: 0;
+  height: 25rem;
   width: 100%;
   object-fit: cover;
   z-index: 10;
@@ -141,6 +156,7 @@ section {
   position: absolute;
   bottom: 0;
   left: 0;
+  height: 45rem;
   width: 100%;
   object-fit: cover;
   z-index: 5;
@@ -150,7 +166,7 @@ section {
   top: 15rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 25vw;
+  width: 30vw;
   z-index: 1;
 }
 .home .cloud-1 {
@@ -200,6 +216,37 @@ section {
   z-index: 12;
 }
 
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.about .image {
+  flex: 1 1 42rem;
+}
+.about .image img {
+  width: 100%;
+}
+.about .content {
+  flex: 1 1 42rem;
+}
+.about .content span {
+  font-size: 2rem;
+  color: #0097e6;
+}
+.about .content h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+.about .content p {
+  font-size: 1.5rem;
+  color: #aaa;
+  line-height: 2;
+  padding: 1.5rem 0;
+}
+
 @media (max-width: 1250px) {
   .header {
     padding: 1.5rem 2rem;
@@ -214,6 +261,15 @@ section {
   }
   .home .content h3 {
     font-size: 8rem;
+  }
+  .home .moon {
+    width: 35vw;
+  }
+  .home .cloud-1 {
+    top: 25rem;
+  }
+  .home .cloud-2 {
+    top: 10rem;
   }
 }
 @media (max-width: 1050px) {
@@ -254,11 +310,24 @@ section {
     font-size: 50%;
   }
 
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
   .home .content p {
     font-size: 1rem;
   }
   .home .content h3 {
     font-size: 3rem;
+  }
+}
+@media (max-width: 250px) {
+  .home .tree {
+    height: 8rem;
+  }
+  .home .mountain {
+    height: 15rem;
   }
 }
 

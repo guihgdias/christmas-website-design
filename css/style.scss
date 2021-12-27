@@ -70,6 +70,21 @@ section {
   padding: 3rem 9%;
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  background: $blue;
+  color: $white;
+  cursor: pointer;
+  font-size: 1.5rem;
+
+  &:hover {
+    background: $white;
+    color: $blue;
+  }
+}
+
 //Header
 .header {
   position: fixed;
@@ -166,7 +181,7 @@ section {
 .home {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../assets/images/home-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -176,6 +191,7 @@ section {
     position: absolute;
     bottom: 0;
     left: 0;
+    height: 25rem;
     width: 100%;
     object-fit: cover;
     z-index: 10;
@@ -185,6 +201,7 @@ section {
     position: absolute;
     bottom: 0;
     left: 0;
+    height: 45rem;
     width: 100%;
     object-fit: cover;
     z-index: 5;
@@ -195,7 +212,7 @@ section {
     top: 15rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 25vw;
+    width: 30vw;
     z-index: 1;
   }
 
@@ -248,7 +265,37 @@ section {
   }
 }
 
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
 
+  .image {
+    flex: 1 1 42rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .content {
+    flex: 1 1 42rem;
+
+    span {
+      font-size: 2rem;
+      color: $blue;
+    }
+
+    h3 {
+      @include title-text(2.5rem);
+    }
+
+    p {
+      @include graph-text(1.5rem);
+    }
+  }
+}
 
 
 
@@ -271,6 +318,18 @@ section {
       h3 {
         font-size: 8rem;
       }
+    }
+
+    .moon {
+      width: 35vw;
+    }
+
+    .cloud-1 {
+      top: 25rem;
+    }
+
+    .cloud-2 {
+      top: 10rem;
     }
   }
 }
@@ -324,6 +383,11 @@ section {
     font-size: 50%;
   }
 
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
   .home {
     .content {
       p {
@@ -333,6 +397,18 @@ section {
       h3 {
         font-size: 3rem;
       }
+    }
+  }
+}
+
+@media (max-width: 250px) {
+  .home {
+    .tree {
+      height: 8rem;
+    }
+
+    .mountain {
+      height: 15rem;
     }
   }
 }
