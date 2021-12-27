@@ -330,6 +330,79 @@ section {
   text-decoration: line-through;
 }
 
+.services .heading {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.services .heading span {
+  color: #0097e6;
+}
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem;
+}
+.services .box-container .box {
+  text-align: center;
+  padding: 3rem;
+}
+.services .box-container .box:nth-child(even) {
+  background: #0a0a0a;
+  border-radius: 0.5rem;
+}
+.services .box-container .box:hover i {
+  transform: translateY(-1rem);
+}
+.services .box-container .box i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #fff;
+  background: #0097e6;
+  margin-bottom: 1rem;
+}
+.services .box-container .box h3 {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+.services .box-container .box p {
+  font-size: 1.5rem;
+  color: #aaa;
+  line-height: 2;
+  padding: 1.5rem 0;
+  padding-bottom: 0;
+}
+
+.gallery .heading {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.gallery .heading span {
+  color: #0097e6;
+}
+.gallery .box-container {
+  columns: 25rem 3;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+.gallery .box-container img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
 @media (max-width: 1250px) {
   .header {
     padding: 1.5rem 2rem;
