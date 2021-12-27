@@ -323,6 +323,32 @@ section {
   }
 }
 @media (max-width: 250px) {
+  .header {
+    flex-direction: column;
+  }
+  .header .logo {
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+  .header .navbar a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 1.5rem;
+  }
+  .header .navbar a:hover {
+    color: #0097e6;
+  }
+  .header .icons div,
+.header .icons a {
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.5rem;
+    font-size: 1rem;
+  }
+
   .home .tree {
     height: 8rem;
   }
