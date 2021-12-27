@@ -263,25 +263,14 @@ section {
   }
 
   .home {
-    
-    .tree {
-      width: 120%;
-    }
+    .content {
+      p {
+        font-size: 2.5rem;
+      }
 
-    .mountain {
-      width: 120%;
-    }
-
-    .moon {
-      top: 20rem;
-    }
-
-    .cloud-1 {
-      top: 25rem;
-    }
-
-    .cloud-2 {
-      top: 10rem;
+      h3 {
+        font-size: 8rem;
+      }
     }
   }
 }
@@ -316,17 +305,15 @@ section {
       }
     }
   }
-
-  .home {
   
+  .home {
     .content {
-      
       p {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
       h3 {
-        font-size: 3rem;
+        font-size: 5rem;
       }
     }
   }
@@ -335,5 +322,17 @@ section {
 @media (max-width: 500px) {
   html {
     font-size: 50%;
+  }
+
+  .home {
+    .content {
+      p {
+        font-size: 1rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+      }
+    }
   }
 }

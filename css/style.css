@@ -209,20 +209,11 @@ section {
     padding: 3rem 9%;
   }
 
-  .home .tree {
-    width: 120%;
+  .home .content p {
+    font-size: 2.5rem;
   }
-  .home .mountain {
-    width: 120%;
-  }
-  .home .moon {
-    top: 20rem;
-  }
-  .home .cloud-1 {
-    top: 25rem;
-  }
-  .home .cloud-2 {
-    top: 10rem;
+  .home .content h3 {
+    font-size: 8rem;
   }
 }
 @media (max-width: 1050px) {
@@ -252,15 +243,22 @@ section {
   }
 
   .home .content p {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .home .content h3 {
-    font-size: 3rem;
+    font-size: 5rem;
   }
 }
 @media (max-width: 500px) {
   html {
     font-size: 50%;
+  }
+
+  .home .content p {
+    font-size: 1rem;
+  }
+  .home .content h3 {
+    font-size: 3rem;
   }
 }
 
