@@ -69,7 +69,6 @@ html {
 body {
   overflow-x: hidden;
   background: $black;
-  height: 1000rem;
 }
 
 section {
@@ -516,6 +515,163 @@ section {
     textarea {
       height: 15rem;
       resize: none;
+    }
+  }
+}
+
+.blogs {
+  .heading {
+    @include title-text(3rem);
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    
+    span {
+      color: $blue;
+    }
+  }
+
+  .box-container {
+    @include grid(31rem);
+
+    .box {
+      text-align: center;
+
+      &:hover {
+        .image img {
+          transform: scale(1.1);
+        }
+      }
+
+      .image {
+        height: 25rem;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .content {
+        padding-top: 2rem;
+        background-color: $light-bg;
+
+        h3 {
+          @include title-text(2rem);
+        }
+
+        p {
+          @include graph-text(1.5rem);
+          padding: 2rem;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+        .icons {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 2rem;
+          background-color: $light-bg;
+
+          a {
+            font-size: 1.2rem;
+            color: $white;
+
+            i {
+              color: $blue;
+              padding-right: .5rem;
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
+.footer {
+  background-color: $light-bg;
+  padding: 3rem 9%;
+
+  .box-container {
+    @include grid(25rem);
+
+    .box {
+      h3 {
+        @include title-text(2rem);
+        padding: 2rem 0;
+      }
+
+      .link {
+        display: block;
+        color: $light-color;
+        padding: 1rem 0;
+        font-size: 1.4rem;
+
+        i {
+          color: $blue;
+          padding-right: .5rem;
+        }
+
+        &:hover {
+          color: $blue;
+
+          i {
+            padding-right: 2rem;
+          }
+        }
+      }
+
+      .email {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border: $border;
+        color: $white;
+        margin: 1rem 0;
+        background: none;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .share {
+        margin-top: 1.5rem;
+
+        a {
+          height: 4rem;
+          width: 4rem;
+          line-height: 4rem;
+          font-size: 1.5rem;
+          background-color: $white;
+          color: $blue;
+          margin-right: .5rem;
+          text-align: center;
+
+          &:hover {
+            background-color: $blue;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .credit {
+    text-align: center;
+    @include title-text(1.2rem);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    border-top: $border;
+
+    span {
+      color: $blue;
     }
   }
 }
